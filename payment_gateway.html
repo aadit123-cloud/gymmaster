@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway - Fitness Management System</title>
+    <link rel="stylesheet" href="fitness.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="GymMaster Logo">
+            <h1>GYMMASTER</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="fitness.html">Home</a></li>
+                <li><a href="#features">Features &#9662;</a>
+                    <ul class="dropdown">
+                        <li><a href="dietplan.html">Diet Plan</a></li>
+                        <li><a href="membershipmanagement.html">Membership Management</a></li>
+                        <li><a href="creatin.html">Creatine Shop Address</a></li>
+                    </ul>
+                </li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="#get-started" class="button">Get Started</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="payment-gateway">
+        <div class="payment-container">
+            <h2>Payment Gateway</h2>
+            <p>Enter your payment details below:</p>
+
+            <div class="payment-form">
+                <h3>Selected Plan: <span id="selected-plan"></span></h3>
+                <form id="payment-form">
+                    <div class="form-group">
+                        <label for="payment-method">Payment Method:</label>
+                        <select id="payment-method" name="payment-method" required>
+                            <option value="card">Credit/Debit Card</option>
+                            <option value="upi">UPI</option>
+                        </select>
+                    </div>
+
+                    <div id="card-details" class="payment-details">
+                        <div class="form-group">
+                            <label for="card-number">Card Number:</label>
+                            <input type="text" id="card-number" name="card-number" placeholder="Enter your card number">
+                        </div>
+                        <div class="form-group">
+                            <label for="expiry-date">Expiry Date:</label>
+                            <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY">
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV:</label>
+                            <input type="text" id="cvv" name="cvv" placeholder="Enter CVV">
+                        </div>
+                    </div>
+
+                    <div id="upi-details" class="payment-details" style="display: none;">
+                        <div class="form-group">
+                            <label for="upi-id">UPI ID:</label>
+                            <input type="text" id="upi-id" name="upi-id" placeholder="Enter your UPI ID">
+                        </div>
+                    </div>
+
+                    <button type="submit">Complete Payment</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Fitness Management System</p>
+    </footer>
+
+    <script src="payment.js"></script>
+</body>
+</html>
